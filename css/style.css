@@ -337,7 +337,7 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
 }
 
 
-.border-work-item:hover {
+.border-work-item-bold:hover {
   border: 2px solid #ccc;
 }
 
