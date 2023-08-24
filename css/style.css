@@ -330,6 +330,16 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
   border: 1px solid #ccc;
 }
 
+.border-work-item-bold {
+  border: 1px solid #ccc;
+  background-color: #f5f5f5;
+  margin-bottom: 25px;
+}
+
+
+.border-work-item:hover {
+  border: 2px solid #ccc;
+}
 
 .work-item {
   
