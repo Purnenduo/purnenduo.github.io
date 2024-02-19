@@ -144,55 +144,52 @@ This power supply had an input voltage of 110-250V AC at 50/60 Hz. Afterwards, i
 
 							</div>	
 
-</p><p>
+</p>
+							<h4>
 Part 2: Quick hack for a portable high voltage power supply using a DC-DC voltage amplifier
 
-	</p><p>
+	</h4>
+							
+							<p>
 The next experiment I did was developing a quick high voltage, low current DC power supply using a DC-DC high voltage converter (PICO 5VV10P) and high voltage optocouplers ( OC 100G) acting as switches. The DC-DC converter provided 0-10kV output proportional to 0-5 V input. A darlington transistor array  IC (Toshiba ULN2803A) was used to modulate a 5V regulated power supply using a microcontroller that goes as input  to the DC-DC converter as well as to control the optocouplers. 
 
 		</p><p>
 The optocouplers are arranged in a H-bridge configuration ensuring polarity switching at both the leads coming out of the power supply.
 
 The DC-DC high voltage converter (PICO 5VV10P) leads to the major rediction in the size of the power supply. On some digging, it seems to have not just using a step up transformer to multiply the voltage but also a Cockcroft–Walton generator kind of arrangement. 
-		</p><p>
-		Part 3: Miniaturizing High Voltage PCB with Advanced DC-DC Amplifiers
-</p><p>
-Continuing the trajectory of innovation, focus shifted towards the development of a high voltage PCB, leveraging an even more compact DC-DC amplifier (EMCO A60P-5). This sophisticated power supply integrated a microcontroller (Arduino Micro), low voltage regulated DC components, alongside the high voltage amplifier and optocouplers, culminating in a harmonious convergence of size and efficiency.</p> 
-							
+		</p>
+
+
 							<div class="medium_text">
-									<img src="img/Video_Schematic_Figure.png" alt="Free HTML5 Bootstrap" class="img-responsive" STYLE="width: 100%;"><p style="color:black"> 
-										Construction of the fingertip wearable ElectroHydraulic Haptic
-Interface. The design consists of 16 actuators that are fabricated in
-two separate layers. Each layer holds 8 actuators entirely insulated from each
-other. Figure above shows the exploded view of all the components that go into the
-construction of a single layer of 8 actuators.
+									<img src="img/Simple_HV_front.jpg" alt="Free HTML5 Bootstrap" class="img-responsive" STYLE="width: 100%;"><p style="color:black"> 
+										A quick hack for a high voltage power supply using a DC-DC converter.
  </p>
 
-							</div>
+							</div>	
+									<div class="medium_text">
+									<img src="img/Simple_HV_back.jpg" alt="Free HTML5 Bootstrap" class="img-responsive" STYLE="width: 100%;"><p style="color:black"> 
+										This high voltage cicuit features four optocouplers arrangend in an H-beidge fashion to swich the polarity of the leads.
+ </p>
 
+							</div>	
 							
-								 <p>
-
-								The tactile bubble consists of a top stretchable layer and
-bottom non-stretchable layer that gives it ability to inflate
-asymmetrically in a preferred direction. The electrohydraulic
-chamber is made out by trapping a small amount of dielectric
-fluid in between two layer of a dielectric thermoplastic film
-that are covered with flexible electrodes (conductive carbon
-tape) on the outside. The electrodes are further
-insulated with another layer of dielectric film whose edges are
-further secured with polyimide tape. The neck of the actuator is
-embedded with elastomeric (silicone) tubes that prevent
-buckling of the fluidic channel when bent around the finger.
-
-								 </p>
-
-								
+							<h4>
+		Part 3: Miniaturizing high voltage PCB with more compact DC-DC amplifiers
+</h4>
+							<p>
+Continuing the trajectory of innovation, focus shifted towards the development of a high voltage PCB, leveraging an even more compact DC-DC amplifier (EMCO A60P-5). This sophisticated power supply integrated a microcontroller (Arduino Micro), low voltage regulated DC components, alongside the high voltage amplifier and optocouplers, culminating in a harmonious convergence of size and efficiency.
 							
-							<div class="medium_text">
-									<p style="color:black"> Figure below shows the schematic of a single bubble actuator in inflated state [(when a high Voltage (4000-5000 Volts) is applied to the electrodes]. </p>
-								<img src="img/Individual_Bubble_Actuator.jpg" alt="Free HTML5 Bootstrap" class="img-responsive" STYLE="width: 100%;">
-							</div>
+							This PCB is based on the design by Project Peta-pico-Voltron.
+							</p> 
+							
+							
+
+		<div class="medium_text">
+									<img src="img/HV_PCB.jpg" alt="Free HTML5 Bootstrap" class="img-responsive" STYLE="width: 100%;"><p style="color:black"> 
+										The compact HV PCB uses a tiny DC-DC converter. 
+ </p>
+
+							</div>	
 							
 							
 							
