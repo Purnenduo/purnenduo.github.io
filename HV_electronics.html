@@ -113,7 +113,7 @@
 					<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
 						
 						<div class="col-md-9 col-md-push-3">
-							<h1>Fingertip wearable electrohydraulic haptic interface</h1>
+							<h1>A primer in high voltage electronics </h1>
 							
 
 							<div class="video-container" STYLE="margin:0px 0px 20px">
@@ -122,12 +122,31 @@
 								
 							</div>
 
-							<p> Fingertips are one of the most sensitive regions of the human body and provide a means to dexterously interact with the physical world. To recreate this sense of physical touch in a virtual or augmented reality (VR/AR), 
-								high-resolution haptic interfaces that can render rich tactile information are needed. In this paper, we present a wearable electrohydraulic haptic interface that can produce high-fidelity multimodal haptic feedback at the fingertips. 
-								This novel hardware can generate high intensity fine tactile pressure (up to 34 kPa) as well as a wide range of vibrations (up to 700 Hz) through 16 individually controlled electrohydraulic bubble actuators. To achieve such a 
-								high intensity multimodal haptic feedback at such a high density (16 bubbles/cm 2) at the fingertip using an electrohydraulic haptic interface , we integrated a stretchable substrate with a novel dielectric film and developed a 
-								design architecture wherein the dielectric fluid is stored at the back of the fingertip. We physically characterize the static and dynamic behavior of the device. In addition, we conduct psychophysical characterization of the device 
-								through a set of user studies. This electrohydraulic interface demonstrates a new way to design and develop high-resolution multimodal haptic systems at the fingertips for AR/VR environments. </p> 
+							<p> I began working on high voltage electronics in order to control the high voltage soft electro hydraulic actuators I was building. This was the beginning of my Ph.D. and I was a noob for anything high voltage. Over time I learned a lot. Here is a crude summary of things I tinkered with to begin with and afterwards developed in a more rigorous manner.
+</p><p>
+Part1: Bulky old high voltage DC power supply
+
+	</p><p>
+Below is an old and bulky DC high voltage power supply I was able to scavenge from ebay (the last servicing date on its label was 1984! Repairing it gave a first understanding of the high voltage electronics and belief that they could be simple in basic units.
+
+</p><p>
+This power supply had an input voltage of 110-250V AC at 50/60 Hz. Afterwards, inside the power supply, it  passed through an electric ballast (the ones earlier used in fluorescent light bulbs) to limit the current. The current limited AC signal was feeded to the transformer which stepped it up to the desirable voltage. Afterwards, a simple full wave rectifier and you had the high voltage (DC) output. It ofcourse had peripheral components like the ON/OFF indicator, voltmeter and ammeter. 
+
+
+</p><p>
+Part 2: Quick hack for a portable high voltage power supply using a DC-DC voltage amplifier
+
+	</p><p>
+The next experiment I did was developing a quick high voltage, low current DC power supply using a DC-DC high voltage converter (PICO 5VV10P) and high voltage optocouplers ( OC 100G) acting as switches. The DC-DC converter provided 0-10kV output proportional to 0-5 V input. A darlington transistor array  IC (Toshiba ULN2803A) was used to modulate a 5V regulated power supply using a microcontroller that goes as input  to the DC-DC converter as well as to control the optocouplers. 
+
+		</p><p>
+The optocouplers are arranged in a H-bridge configuration ensuring polarity switching at both the leads coming out of the power supply.
+
+The DC-DC high voltage converter (PICO 5VV10P) leads to the major rediction in the size of the power supply. On some digging, it seems to have not just using a step up transformer to multiply the voltage but also a Cockcroft–Walton generator kind of arrangement. 
+		</p><p>
+		Part 3: Miniaturizing High Voltage PCB with Advanced DC-DC Amplifiers
+</p><p>
+Continuing the trajectory of innovation, focus shifted towards the development of a high voltage PCB, leveraging an even more compact DC-DC amplifier (EMCO A60P-5). This sophisticated power supply integrated a microcontroller (Arduino Micro), low voltage regulated DC components, alongside the high voltage amplifier and optocouplers, culminating in a harmonious convergence of size and efficiency.</p> 
 							
 							<div class="medium_text">
 									<img src="img/Video_Schematic_Figure.png" alt="Free HTML5 Bootstrap" class="img-responsive" STYLE="width: 100%;"><p style="color:black"> 
